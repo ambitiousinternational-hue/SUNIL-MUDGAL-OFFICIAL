@@ -1,40 +1,1346 @@
-Yes. I reviewed the full 511-line HTML. The original is a good foundation, but it can be made **much more professional, mobile-friendly, SEO-ready, accessible, and visually premium**. For example, the original has a basic hidden mobile navigation, limited SEO metadata, inline styling, no structured data, and a relatively simple contact/footer area. 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 
-### What I improved
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-* **Premium modern design** while keeping the navy/saffron identity.
-* Fully responsive **mobile navigation with hamburger menu**.
-* Better hero section with stronger visual hierarchy.
-* Improved **SEO meta title, description, Open Graph tags and canonical URL placeholder**.
-* Added **Person structured data / Schema.org**.
-* Better semantic HTML: `main`, `article`, `aside`, `nav`, `figure`, etc.
-* Improved accessibility:
+<title>Sunil Mudgal | Jaipur, Rajasthan | Public Leader & Social Worker</title>
 
-  * Skip-to-content link
-  * ARIA labels
-  * Keyboard-friendly navigation
-  * Reduced-motion support
-  * Better image alt text
-* Improved timeline design.
-* Improved media gallery with responsive cards and hover effects.
-* Added **lazy loading** for media images.
-* Added explicit image dimensions to reduce layout shifting.
-* Added a dedicated **Contact / WhatsApp section**.
-* Improved WhatsApp floating button.
-* Removed most inline CSS and consolidated the design system.
-* Added subtle animations without making the site feel excessive.
-* Added a mobile-first responsive structure.
-* Preserved the core content and claims from your original rather than inventing new biography details.
+<meta name="description"
+content="Official public portal of Sunil Mudgal, Jaipur, Rajasthan. Explore his public service journey, community initiatives, leadership activities and media coverage.">
 
-### Important before publishing
+<meta name="keywords"
+content="Sunil Mudgal, Sunil Mudgal Jaipur, Sunil Mudgal Rajasthan, Sunil Mudgal BJP, Sunil Mudgal public leader, Sunil Mudgal social worker, Sunil Mudgal Kisan Morcha">
 
-There are two things I would change before putting this live:
+<meta name="author" content="Sunil Mudgal">
 
-1. Replace `https://YOUR-DOMAIN.com/` with the actual website URL in the canonical, Open Graph and Schema sections.
-2. **Verify every political designation and historical claim** before publication. Your current source contains claims such as “Former National Executive Member, BJP Kisan Morcha” and the various timeline positions, so those should be backed by authoritative sources if this is intended to function as an official public profile.  
+<meta name="robots" content="index, follow, max-image-preview:large">
 
-### Improved version
+<meta name="theme-color" content="#0b132b">
 
-[Download the improved Sunil Mudgal website HTML](sandbox:/mnt/data/sunil_mudgal_official_portal_improved.html)
+<!-- Replace YOUR-DOMAIN.com with your real domain -->
+<link rel="canonical" href="https://YOUR-DOMAIN.com/">
 
-**My next recommendation:** take this one step further into a proper **political/public-figure SEO website**—with Google News/press coverage, a verified-profile style About page, achievements, speeches/statements, press releases, social media links, downloadable media kit, schema markup, sitemap/robots setup, and an SEO structure designed to rank for **“Sunil Mudgal Jaipur,” “Sunil Mudgal Rajasthan,” and “Sunil Mudgal BJP.”**
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sunil Mudgal | Official Public Portal">
+<meta property="og:description"
+content="Official public profile of Sunil Mudgal, Jaipur, Rajasthan — public leadership, community service and media coverage.">
+<meta property="og:image" content="IMG_0245.jpg">
+<meta property="og:url" content="https://YOUR-DOMAIN.com/">
+<meta property="og:site_name" content="Sunil Mudgal Official">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sunil Mudgal | Official Public Portal">
+<meta name="twitter:description"
+content="Public leadership, community service and media coverage of Sunil Mudgal.">
+<meta name="twitter:image" content="IMG_0245.jpg">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+:root {
+    --navy:#0b132b;
+    --navy2:#111d3d;
+    --saffron:#ff9933;
+    --orange:#dc7516;
+    --white:#ffffff;
+    --light:#f7f8fb;
+    --border:#e3e8ef;
+    --text:#202938;
+    --muted:#667085;
+    --green:#25d366;
+
+    --shadow:0 10px 30px rgba(11,19,43,.09);
+    --shadow2:0 20px 50px rgba(11,19,43,.15);
+
+    --radius:14px;
+    --max:1180px;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html {
+    scroll-behavior:smooth;
+    scroll-padding-top:80px;
+}
+
+body {
+    font-family:"Inter",sans-serif;
+    color:var(--text);
+    line-height:1.7;
+    background:#fff;
+}
+
+img {
+    max-width:100%;
+    display:block;
+}
+
+a {
+    text-decoration:none;
+}
+
+.container {
+    width:min(92%,var(--max));
+    margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(11,19,43,.97);
+    border-bottom:3px solid var(--saffron);
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+    backdrop-filter:blur(10px);
+}
+
+.nav {
+    min-height:74px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo {
+    font-family:"Cinzel",serif;
+    font-size:1.35rem;
+    font-weight:700;
+    color:white;
+    letter-spacing:1px;
+}
+
+.logo span {
+    color:var(--saffron);
+}
+
+.nav-toggle {
+    display:none;
+    width:44px;
+    height:44px;
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:8px;
+    background:transparent;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.nav-links {
+    display:flex;
+    list-style:none;
+    gap:8px;
+}
+
+.nav-links a {
+    color:#e7edf7;
+    padding:10px 14px;
+    border-radius:8px;
+    font-size:.9rem;
+    font-weight:600;
+    transition:.2s;
+}
+
+.nav-links a:hover {
+    color:white;
+    background:rgba(255,153,51,.15);
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    position:relative;
+    overflow:hidden;
+    color:white;
+    background:
+        radial-gradient(circle at 80% 20%,rgba(255,153,51,.15),transparent 30%),
+        linear-gradient(135deg,var(--navy),var(--navy2));
+
+    padding:90px 0 110px;
+}
+
+.hero-grid {
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    align-items:center;
+    gap:60px;
+}
+
+.eyebrow {
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    color:var(--saffron);
+    text-transform:uppercase;
+    font-size:.8rem;
+    font-weight:700;
+    letter-spacing:1.5px;
+    margin-bottom:15px;
+}
+
+.eyebrow:before {
+    content:"";
+    width:30px;
+    height:2px;
+    background:var(--saffron);
+}
+
+.hero h1 {
+    font-family:"Cinzel",serif;
+    font-size:clamp(2.7rem,6vw,5rem);
+    line-height:1.1;
+    margin-bottom:12px;
+}
+
+.hero-subtitle {
+    color:#ffb35c;
+    font-size:1.1rem;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero-description {
+    color:#d6deeb;
+    max-width:680px;
+    font-size:1.05rem;
+    margin-bottom:28px;
+}
+
+.buttons {
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.btn {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    min-height:48px;
+    padding:12px 20px;
+    border-radius:9px;
+    font-weight:700;
+    transition:.2s;
+}
+
+.btn:hover {
+    transform:translateY(-2px);
+}
+
+.btn-primary {
+    background:var(--saffron);
+    color:var(--navy);
+}
+
+.btn-primary:hover {
+    background:#ffae57;
+}
+
+.btn-outline {
+    color:white;
+    border:1px solid rgba(255,255,255,.3);
+    background:rgba(255,255,255,.04);
+}
+
+.btn-outline:hover {
+    background:rgba(255,255,255,.1);
+}
+
+.hero-photo {
+    width:min(100%,390px);
+    margin:auto;
+    position:relative;
+}
+
+.hero-photo:after {
+    content:"";
+    position:absolute;
+    inset:18px -18px -18px 18px;
+    border:2px solid var(--saffron);
+    border-radius:var(--radius);
+}
+
+.hero-photo img {
+    position:relative;
+    z-index:2;
+    width:100%;
+    height:470px;
+    object-fit:cover;
+    object-position:top center;
+    border:5px solid white;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow2);
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+    padding:80px 0;
+}
+
+.section-header {
+    max-width:720px;
+    margin:0 auto 45px;
+    text-align:center;
+}
+
+.kicker {
+    color:var(--orange);
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    font-size:.78rem;
+    font-weight:800;
+    margin-bottom:8px;
+}
+
+.section-title {
+    font-family:"Cinzel",serif;
+    color:var(--navy);
+    font-size:clamp(1.9rem,4vw,2.6rem);
+    margin-bottom:10px;
+}
+
+.section-description {
+    color:var(--muted);
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid {
+    display:grid;
+    grid-template-columns:1.7fr 1fr;
+    gap:24px;
+}
+
+.card {
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    background:white;
+    box-shadow:var(--shadow);
+}
+
+.about-card {
+    padding:40px;
+    border-left:5px solid var(--navy);
+}
+
+.about-card p + p {
+    margin-top:18px;
+}
+
+.facts {
+    padding:32px;
+    color:white;
+    background:linear-gradient(150deg,var(--navy),var(--navy2));
+}
+
+.facts h3 {
+    font-family:"Cinzel",serif;
+    color:var(--saffron);
+    margin-bottom:18px;
+}
+
+.facts ul {
+    list-style:none;
+}
+
+.facts li {
+    padding:13px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
+    color:#dce4ef;
+}
+
+.facts strong {
+    color:white;
+}
+
+/* ================= JOURNEY ================= */
+
+.journey {
+    background:var(--light);
+}
+
+.timeline {
+    max-width:900px;
+    margin:auto;
+    position:relative;
+}
+
+.timeline:before {
+    content:"";
+    position:absolute;
+    left:17px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:#d9dee8;
+}
+
+.timeline-item {
+    position:relative;
+    padding-left:60px;
+    margin-bottom:22px;
+}
+
+.dot {
+    position:absolute;
+    left:7px;
+    top:20px;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    background:var(--navy);
+    border:5px solid var(--saffron);
+    box-shadow:0 0 0 5px var(--light);
+}
+
+.timeline-content {
+    background:white;
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:24px;
+    box-shadow:var(--shadow);
+}
+
+.year {
+    color:var(--orange);
+    font-size:.9rem;
+    font-weight:800;
+}
+
+.timeline-title {
+    font-family:"Cinzel",serif;
+    color:var(--navy);
+    font-size:1.15rem;
+    margin:4px 0 7px;
+}
+
+/* ================= MEDIA ================= */
+
+.media-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.media-card {
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    background:white;
+    box-shadow:var(--shadow);
+    transition:.25s;
+}
+
+.media-card:hover {
+    transform:translateY(-6px);
+    box-shadow:var(--shadow2);
+}
+
+.media-image {
+    aspect-ratio:4/3;
+    overflow:hidden;
+    background:#eef2f7;
+}
+
+.media-image img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.35s;
+}
+
+.media-card:hover img {
+    transform:scale(1.04);
+}
+
+.media-content {
+    padding:22px;
+}
+
+.media-content h3 {
+    font-family:"Cinzel",serif;
+    color:var(--navy);
+    font-size:1.05rem;
+    margin-bottom:7px;
+}
+
+.media-content p {
+    color:var(--muted);
+    font-size:.9rem;
+}
+
+/* ================= CONTACT ================= */
+
+.contact {
+    background:linear-gradient(135deg,var(--navy),var(--navy2));
+    color:white;
+    text-align:center;
+}
+
+.contact h2 {
+    font-family:"Cinzel",serif;
+    font-size:clamp(2rem,4vw,2.8rem);
+    margin-bottom:12px;
+}
+
+.contact p {
+    color:#ccd6e4;
+    margin-bottom:25px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background:#070d1d;
+    color:#94a3b8;
+    text-align:center;
+    padding:25px 15px;
+    font-size:.85rem;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp {
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:58px;
+    height:58px;
+    z-index:1200;
+    display:grid;
+    place-items:center;
+    background:var(--green);
+    color:white;
+    border-radius:50%;
+    font-size:28px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    transition:.2s;
+}
+
+.whatsapp:hover {
+    transform:scale(1.1);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px) {
+
+    .hero-grid,
+    .about-grid {
+        grid-template-columns:1fr;
+    }
+
+    .hero-photo {
+        order:-1;
+    }
+
+    .hero-photo img {
+        height:430px;
+    }
+
+    .media-grid {
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:700px) {
+
+    .nav {
+        min-height:68px;
+    }
+
+    .nav-toggle {
+        display:block;
+    }
+
+    .nav-links {
+        position:absolute;
+        left:0;
+        right:0;
+        top:68px;
+        display:none;
+        flex-direction:column;
+        padding:10px 15px 15px;
+        background:var(--navy);
+        border-top:1px solid rgba(255,255,255,.1);
+    }
+
+    .nav-links.open {
+        display:flex;
+    }
+
+    .nav-links a {
+        display:block;
+        padding:12px;
+    }
+
+    .hero {
+        padding:60px 0 80px;
+    }
+
+    .hero h1 {
+        font-size:2.8rem;
+    }
+
+    .hero-photo img {
+        height:380px;
+    }
+
+    .buttons {
+        flex-direction:column;
+    }
+
+    .buttons .btn {
+        width:100%;
+    }
+
+    .about-card,
+    .facts {
+        padding:25px;
+    }
+
+    .media-grid {
+        grid-template-columns:1fr;
+    }
+
+    .timeline-item {
+        padding-left:42px;
+    }
+
+    .timeline:before {
+        left:12px;
+    }
+
+    .dot {
+        left:2px;
+    }
+
+    section {
+        padding:65px 0;
+    }
+
+    .whatsapp {
+        right:16px;
+        bottom:16px;
+    }
+}
+
+</style>
+
+<!-- ================= STRUCTURED DATA ================= -->
+
+<script type="application/ld+json">
+{
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Sunil Mudgal",
+    "jobTitle":"Public Leader & Social Worker",
+    "description":"Public leader and social worker based in Jaipur, Rajasthan.",
+    "address":{
+        "@type":"PostalAddress",
+        "addressLocality":"Jaipur",
+        "addressRegion":"Rajasthan",
+        "addressCountry":"IN"
+    },
+    "url":"https://YOUR-DOMAIN.com/"
+}
+</script>
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="container nav">
+
+<a href="#home" class="logo">
+SUNIL <span>MUDGAL</span>
+</a>
+
+<button
+class="nav-toggle"
+id="menuButton"
+aria-label="Open navigation"
+aria-expanded="false">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+<nav>
+
+<ul class="nav-links" id="menu">
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#journey">Journey</a>
+</li>
+
+<li>
+<a href="#media">Media</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="eyebrow">
+Jaipur, Rajasthan
+</div>
+
+<h1>
+Sunil Mudgal
+</h1>
+
+<div class="hero-subtitle">
+Public Leader &amp; Social Worker
+</div>
+
+<p class="hero-description">
+
+Former National Executive Member, BJP Kisan Morcha |
+National Convener, Brahm Shakti Sangh.
+
+Dedicated to grassroots empowerment,
+agricultural progress and community harmony
+across Rajasthan.
+
+</p>
+
+<div class="buttons">
+
+<a href="#contact" class="btn btn-primary">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+Connect With Public Office
+
+</a>
+
+<a href="#journey" class="btn btn-outline">
+
+Explore Journey
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-photo">
+
+<img
+src="IMG_0245.jpg"
+alt="Sunil Mudgal official portrait"
+width="390"
+height="470"
+fetchpriority="high">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="kicker">
+About
+</div>
+
+<h2 class="section-title">
+Public Leadership &amp; Service
+</h2>
+
+<p class="section-description">
+A brief overview of public engagement,
+organizational work and community service.
+</p>
+
+</div>
+
+
+<div class="about-grid">
+
+
+<article class="card about-card">
+
+<p>
+
+Shree Sunil Mudgal is a seasoned political leader
+and public servant with over two decades of active
+engagement in student activism, organizational
+party building and social advocacy across Rajasthan.
+
+</p>
+
+<p>
+
+Starting his political journey with student activism
+at Rajasthan University in 1999, he has dedicated
+his public work to uniting community members,
+youth and farmers to support social progress
+and representation.
+
+</p>
+
+</article>
+
+
+<aside class="card facts">
+
+<h3>
+Key Responsibilities
+</h3>
+
+<ul>
+
+<li>
+<strong>Political Wing:</strong>
+Former National Executive Member,
+BJP Kisan Morcha
+</li>
+
+<li>
+<strong>Youth Mobilization:</strong>
+Former State Convener,
+Yuva Kisan Samiti
+</li>
+
+<li>
+<strong>Social Integration:</strong>
+National Convener,
+Brahm Shakti Sangh
+</li>
+
+<li>
+<strong>Headquarters:</strong>
+Jaipur, Rajasthan
+</li>
+
+</ul>
+
+</aside>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= JOURNEY ================= -->
+
+<section class="journey" id="journey">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="kicker">
+Timeline
+</div>
+
+<h2 class="section-title">
+Political Journey
+</h2>
+
+<p class="section-description">
+Selected milestones from the public journey.
+</p>
+
+</div>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+<div class="dot"></div>
+
+<div class="timeline-content">
+
+<div class="year">
+1999 – 2003
+</div>
+
+<h3 class="timeline-title">
+Student Leadership
+</h3>
+
+<p>
+Commenced public work leading student movements
+and student welfare initiatives at Rajasthan University.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="dot"></div>
+
+<div class="timeline-content">
+
+<div class="year">
+2003
+</div>
+
+<h3 class="timeline-title">
+Active Entry &amp; Parivartan Yatra
+</h3>
+
+<p>
+Participated in party mobilization during the state
+Parivartan Yatra under Smt. Vasundhara Raje Scindia.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="dot"></div>
+
+<div class="timeline-content">
+
+<div class="year">
+2007 – Present
+</div>
+
+<h3 class="timeline-title">
+Community Service
+</h3>
+
+<p>
+Elected President of Akhil Bhartiya Brahmin Mahasabha,
+driving national community integration.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="dot"></div>
+
+<div class="timeline-content">
+
+<div class="year">
+2019
+</div>
+
+<h3 class="timeline-title">
+Brahmin Maha Panchayat
+</h3>
+
+<p>
+Served as National Convener for the Maha Panchayat
+held at Vidyadhar Nagar Stadium, Jaipur.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= MEDIA ================= -->
+
+<section id="media">
+
+<div class="container">
+
+<div class="section-header">
+
+<div class="kicker">
+Press &amp; Media
+</div>
+
+<h2 class="section-title">
+Media &amp; Press Updates
+</h2>
+
+<p class="section-description">
+Selected photographs and public activities.
+</p>
+
+</div>
+
+
+<div class="media-grid">
+
+
+<!-- PHOTO 1 -->
+
+<article class="media-card">
+
+<div class="media-image">
+
+<img
+src="image1_7.jpg"
+alt="Sunil Mudgal organizational strategy session"
+loading="lazy"
+width="800"
+height="600">
+
+</div>
+
+<div class="media-content">
+
+<h3>
+Organizational Strategy Session
+</h3>
+
+<p>
+Key meeting with senior party members and regional
+coordinators to discuss worker engagement across Rajasthan.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- PHOTO 2 -->
+
+<article class="media-card">
+
+<div class="media-image">
+
+<img
+src="image2_7.jpg"
+alt="Leadership consultation"
+loading="lazy"
+width="800"
+height="600">
+
+</div>
+
+<div class="media-content">
+
+<h3>
+Leadership Consultation
+</h3>
+
+<p>
+Interaction regarding youth empowerment and
+state development initiatives.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- PHOTO 3 -->
+
+<article class="media-card">
+
+<div class="media-image">
+
+<img
+src="image3_7.jpg"
+alt="Kisan and community delegation"
+loading="lazy"
+width="800"
+height="600">
+
+</div>
+
+<div class="media-content">
+
+<h3>
+Kisan &amp; Community Delegation
+</h3>
+
+<p>
+Interaction with senior national leader
+Parshottam Rupala regarding agricultural welfare
+and rural development.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- PHOTO 4 -->
+
+<article class="media-card">
+
+<div class="media-image">
+
+<img
+src="image5_7.jpg"
+alt="Grassroots public outreach"
+loading="lazy"
+width="800"
+height="600">
+
+</div>
+
+<div class="media-content">
+
+<h3>
+Grassroots Public Outreach
+</h3>
+
+<p>
+Public rallies and community activities focused
+on social unity and regional public concerns.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- PHOTO 5 -->
+
+<article class="media-card">
+
+<div class="media-image">
+
+<img
+src="image6_7.jpg"
+alt="Shri Parshuram Janmotsav launch"
+loading="lazy"
+width="800"
+height="600">
+
+</div>
+
+<div class="media-content">
+
+<h3>
+Shri Parshuram Janmotsav Launch
+</h3>
+
+<p>
+Official invitations and program schedule for
+Shri Parshuram Janmotsav celebrations.
+</p>
+
+</div>
+
+</article>
+
+
+<!-- PHOTO 6 -->
+
+<article class="media-card">
+
+<div class="media-image">
+
+<img
+src="image10_4.jpg"
+alt="Brahm Shakti Sangh press briefing"
+loading="lazy"
+width="800"
+height="600">
+
+</div>
+
+<div class="media-content">
+
+<h3>
+Brahm Shakti Sangh Press Briefing
+</h3>
+
+<p>
+Media coverage of Sunil Mudgal addressing
+press representatives in Jaipur regarding public welfare.
+</p>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<h2>
+Connect With the Public Office
+</h2>
+
+<p>
+For public communication and enquiries,
+please connect through WhatsApp.
+</p>
+
+<a
+href="https://wa.me/919351515133"
+target="_blank"
+rel="noopener noreferrer"
+class="btn btn-primary">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Contact on WhatsApp
+
+</a>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+href="https://wa.me/919351515133"
+target="_blank"
+rel="noopener noreferrer"
+class="whatsapp"
+aria-label="Contact Sunil Mudgal office on WhatsApp">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+&copy; 2026 Sunil Mudgal Official Public Office.
+All Rights Reserved.
+</p>
+
+</footer>
+
+
+<!-- ================= MOBILE MENU ================= -->
+
+<script>
+
+const menuButton = document.getElementById("menuButton");
+
+const menu = document.getElementById("menu");
+
+menuButton.addEventListener("click", function () {
+
+const open = menu.classList.toggle("open");
+
+menuButton.setAttribute(
+"aria-expanded",
+open ? "true" : "false"
+);
+
+menuButton.innerHTML = open
+? '<i class="fa-solid fa-xmark"></i>'
+: '<i class="fa-solid fa-bars"></i>';
+
+});
+
+
+document.querySelectorAll("#menu a").forEach(function(link) {
+
+link.addEventListener("click", function() {
+
+menu.classList.remove("open");
+
+menuButton.setAttribute(
+"aria-expanded",
+"false"
+);
+
+menuButton.innerHTML =
+'<i class="fa-solid fa-bars"></i>';
+
+});
+
+});
+
+</script>
+
+
+</body>
+</html>
