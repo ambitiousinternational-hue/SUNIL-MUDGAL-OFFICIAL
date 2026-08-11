@@ -482,11 +482,11 @@
         <div class="title-underline"></div>
 
         <!-- START REPLACING FROM HERE -->
-        <div class="card-grid">
+       <div class="card-grid">
             
             <!-- PHOTO 1 -->
             <div class="media-card">
-                <img src="image1_5.jpg" alt="Organizational Strategy Session">
+                <img src="image1_7.jpg" alt="Organizational Strategy Session">
                 <div class="media-content">
                     <h3 style="color: var(--navy); margin-bottom: 0.5rem;">Organizational Strategy Session</h3>
                     <p style="font-size: 0.9rem; color: var(--text-muted);">Key meeting with senior party members and regional coordinators to discuss worker engagement across Rajasthan.</p>
@@ -495,7 +495,7 @@
 
             <!-- PHOTO 2 -->
             <div class="media-card">
-                <img src="image2_5.jpg" alt="Meeting with Col. Rajyavardhan Singh Rathore">
+                <img src="image2_7.jpg" alt="Meeting with Col. Rajyavardhan Singh Rathore">
                 <div class="media-content">
                     <h3 style="color: var(--navy); margin-bottom: 0.5rem;">Leadership Consultation</h3>
                     <p style="font-size: 0.9rem; color: var(--text-muted);">High-level interaction with Col. Rajyavardhan Singh Rathore regarding youth empowerment and state development initiatives.</p>
@@ -504,7 +504,7 @@
 
             <!-- PHOTO 3 -->
             <div class="media-card">
-                <img src="image3_5.jpg" alt="Kisan & Community Delegation">
+                <img src="image3_7.jpg" alt="Kisan & Community Delegation">
                 <div class="media-content">
                     <h3 style="color: var(--navy); margin-bottom: 0.5rem;">Kisan & Community Delegation</h3>
                     <p style="font-size: 0.9rem; color: var(--text-muted);">Interaction with senior national leader Parshottam Rupala advocating for agricultural welfare and rural development.</p>
@@ -513,7 +513,7 @@
 
             <!-- PHOTO 4 -->
             <div class="media-card">
-                <img src="image5_5.jpg" alt="Grassroots Public Outreach">
+                <img src="image5_7.jpg" alt="Grassroots Public Outreach">
                 <div class="media-content">
                     <h3 style="color: var(--navy); margin-bottom: 0.5rem;">Grassroots Public Outreach</h3>
                     <p style="font-size: 0.9rem; color: var(--text-muted);">Leading public rallies and community marches for social unity and addressing regional public grievances.</p>
@@ -522,7 +522,7 @@
 
             <!-- PHOTO 5 -->
             <div class="media-card">
-                <img src="image6_5.jpg" alt="Shri Parshuram Janmotsav Launch">
+                <img src="image6_7.jpg" alt="Shri Parshuram Janmotsav Launch">
                 <div class="media-content">
                     <h3 style="color: var(--navy); margin-bottom: 0.5rem;">Shri Parshuram Janmotsav Launch</h3>
                     <p style="font-size: 0.9rem; color: var(--text-muted);">Unveiling official invitations and program schedule for the national Shri Parshuram Janmotsav celebrations.</p>
@@ -531,7 +531,7 @@
 
             <!-- PHOTO 6 (NEWSPAPER CLIPPING) -->
             <div class="media-card">
-                <img src="image10_2.jpg" alt="Brahm Shakti Sangh Press Conference">
+                <img src="image10_4.jpg" alt="Brahm Shakti Sangh Press Conference">
                 <div class="media-content">
                     <h3 style="color: var(--navy); margin-bottom: 0.5rem;">Brahm Shakti Sangh Press Briefing</h3>
                     <p style="font-size: 0.9rem; color: var(--text-muted);">Media coverage of National Convener Sunil Mudgal addressing press representatives at Hotel Safari, Jaipur regarding public welfare.</p>
