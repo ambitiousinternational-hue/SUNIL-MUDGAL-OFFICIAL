@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b132b">
+  <meta name="description" content="Official public portal of Sunil Mudgal — public leader and social worker from Jaipur, Rajasthan. Explore his public service journey, community initiatives and media coverage.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://YOUR-DOMAIN.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sunil Mudgal | Official Public Portal">
+  <meta property="og:description" content="Public leadership, community service, initiatives and media coverage of Sunil Mudgal.">
+  <meta property="og:image" content="IMG_0245.jpg">
+  <meta property="og:url" content="https://YOUR-DOMAIN.com/">
+
+  <title>Sunil Mudgal | Official Public Portal</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <style>
+    :root {
+      --navy: #0b132b;
+      --navy-2: #111d3d;
+      --saffron: #ff9933;
+      --saffron-dark: #dc7516;
+      --white: #fff;
+      --surface: #f7f8fb;
+      --surface-2: #eef2f7;
+      --text: #202938;
+      --muted: #667085;
+      --border: #e3e8ef;
+      --success: #25d366;
+      --shadow-sm: 0 8px 24px rgba(11, 19, 43, .07);
+      --shadow-md: 0 18px 45px rgba(11, 19, 43, .12);
+      --radius: 14px;
+      --max-width: 1180px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; }
+    a { color: inherit; }
+
+    .skip-link {
+      position: fixed;
+      left: 1rem;
+      top: -100px;
+      z-index: 2000;
+      padding: .75rem 1rem;
+      background: var(--white);
+      color: var(--navy);
+      border-radius: 8px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .skip-link:focus { top: 1rem; }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--max-width));
+      margin-inline: auto;
+    }
+
+    /* HEADER */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 19, 43, .96);
+      border-bottom: 3px solid var(--saffron);
+      box-shadow: 0 5px 20px rgba(0,0,0,.14);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      text-decoration: none;
+      color: var(--white);
+      font-family: "Cinzel", serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: .8px;
+      white-space: nowrap;
+    }
+
+    .brand span { color: var(--saffron); }
+
+    .nav-toggle {
+      display: none;
+      border: 1px solid rgba(255,255,255,.2);
+      background: transparent;
+      color: var(--white);
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.15rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: .25rem;
+    }
+
+    .nav-links a {
+      display: block;
+      padding: .65rem .85rem;
+      color: #e8edf6;
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: .2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--white);
+      background: rgba(255,153,51,.12);
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 80% 20%, rgba(255,153,51,.13), transparent 30%),
+        linear-gradient(135deg, var(--navy), var(--navy-2));
+      padding: clamp(4rem, 8vw, 7rem) 0;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -130px;
+      height: 220px;
+      background: var(--white);
+      transform: rotate(-3deg);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: clamp(2.5rem, 6vw, 5rem);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      color: var(--saffron);
+      font-size: .82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 1rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 2px;
+      background: var(--saffron);
+    }
+
+    h1, h2, h3 {
+      font-family: "Cinzel", serif;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4.6rem);
+      letter-spacing: -.5px;
+      margin-bottom: .75rem;
+    }
+
+    .hero-subtitle {
+      color: #ffb35c;
+      font-weight: 700;
+      font-size: clamp(.95rem, 2vw, 1.12rem);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-copy {
+      max-width: 680px;
+      color: #d9e1ee;
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .8rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .55rem;
+      min-height: 48px;
+      padding: .75rem 1.15rem;
+      border-radius: 9px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: var(--saffron);
+      color: var(--navy);
+    }
+
+    .btn-primary:hover { background: #ffab52; }
+
+    .btn-outline {
+      color: var(--white);
+      border-color: rgba(255,255,255,.25);
+      background: rgba(255,255,255,.04);
+    }
+
+    .btn-outline:hover { background: rgba(255,255,255,.1); }
+
+    .hero-photo-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-photo {
+      position: relative;
+      width: min(100%, 390px);
+    }
+
+    .hero-photo::before {
+      content: "";
+      position: absolute;
+      inset: 16px -16px -16px 16px;
+      border: 2px solid var(--saffron);
+      border-radius: var(--radius);
+      opacity: .7;
+    }
+
+    .hero-photo img {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 470px;
+      object-fit: cover;
+      object-position: top center;
+      border: 5px solid var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      background: var(--surface-2);
+    }
+
+    /* GENERAL SECTIONS */
+    section { padding: clamp(4rem, 7vw, 6rem) 0; }
+
+    .section-heading {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 3rem;
+    }
+
+    .section-kicker {
+      color: var(--saffron-dark);
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-size: .78rem;
+      font-weight: 800;
+      margin-bottom: .5rem;
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin-bottom: .8rem;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 650px;
+      margin-inline: auto;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.7fr 1fr;
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      background: var(--white);
+    }
+
+    .about-card {
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      border-left: 5px solid var(--navy);
+    }
+
+    .about-card p + p { margin-top: 1rem; }
+
+    .facts-card {
+      padding: clamp(1.5rem, 4vw, 2.2rem);
+      color: var(--white);
+      background: linear-gradient(160deg, var(--navy), var(--navy-2));
+    }
+
+    .facts-card h3 {
+      color: var(--saffron);
+      font-size: 1.25rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .facts-list { list-style: none; }
+
+    .facts-list li {
+      padding: .85rem 0;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      color: #e3e9f2;
+    }
+
+    .facts-list li:last-child { border-bottom: 0; }
+
+    .facts-list strong { color: var(--white); }
+
+    /* TIMELINE */
+    .journey-section { background: var(--surface); }
+
+    .timeline {
+      max-width: 900px;
+      margin-inline: auto;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 17px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #d9dee8;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 58px;
+      margin-bottom: 1.25rem;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 7px;
+      top: 22px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--navy);
+      border: 5px solid var(--saffron);
+      box-shadow: 0 0 0 5px var(--surface);
+    }
+
+    .timeline-content {
+      padding: 1.35rem 1.5rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .timeline-year {
+      color: var(--saffron-dark);
+      font-weight: 800;
+      font-size: .9rem;
+      margin-bottom: .25rem;
+    }
+
+    .timeline-title {
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: .45rem;
+    }
+
+    /* MEDIA */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .media-card {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .media-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .media-image {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: var(--surface-2);
+    }
+
+    .media-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform .35s ease;
+    }
+
+    .media-card:hover .media-image img { transform: scale(1.04); }
+
+    .media-content {
+      padding: 1.3rem;
+      flex: 1;
+    }
+
+    .media-content h3 {
+      color: var(--navy);
+      font-size: 1.08rem;
+      margin-bottom: .5rem;
+    }
+
+    .media-content p {
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    /* CONTACT */
+    .contact-section {
+      background: linear-gradient(135deg, var(--navy), var(--navy-2));
+      color: var(--white);
+    }
+
+    .contact-box {
+      max-width: 850px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .contact-box h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: .75rem; }
+    .contact-box p { color: #cbd5e1; margin-bottom: 1.5rem; }
+
+    /* FOOTER */
+    footer {
+      background: #070d1d;
+      color: #94a3b8;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: .85rem;
+    }
+
+    /* WHATSAPP */
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 1100;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--white);
+      background: var(--success);
+      text-decoration: none;
+      font-size: 1.75rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,.22);
+      transition: transform .2s ease;
+    }
+
+    .whatsapp:hover { transform: scale(1.08); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-grid, .about-grid { grid-template-columns: 1fr; }
+      .hero-copy { max-width: 100%; }
+      .hero-photo-wrap { order: -1; }
+      .hero-photo { width: min(100%, 340px); }
+      .hero-photo img { height: 420px; }
+      .media-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 700px) {
+      .nav { min-height: 68px; }
+      .nav-toggle { display: block; }
+      .nav-links {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: .75rem 1rem 1rem;
+        background: var(--navy);
+        border-top: 1px solid rgba(255,255,255,.1);
+      }
+
+      .nav-links.is-open { display: flex; }
+      .nav-links a { padding: .8rem; }
+
+      .hero { padding: 3.5rem 0 5rem; }
+      .hero-photo img { height: 380px; }
+      .hero-actions .btn { width: 100%; }
+
+      .media-grid { grid-template-columns: 1fr; }
+
+      .timeline::before { left: 12px; }
+      .timeline-item { padding-left: 40px; }
+      .timeline-dot { left: 2px; width: 22px; height: 22px; }
+
+      .whatsapp { right: 16px; bottom: 16px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+    }
+  </style>
+
+  <!-- Structured data for the person represented by this public portal.
+       Verify all role/title claims before publishing. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sunil Mudgal",
+    "jobTitle": "Public Leader & Social Worker",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jaipur",
+      "addressRegion": "Rajasthan",
+      "addressCountry": "IN"
+    },
+    "url": "https://YOUR-DOMAIN.com/"
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Sunil Mudgal home">SUNIL <span>MUDGAL</span></a>
+
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links" id="primary-navigation">
+          <li><a href="#about">About</a></li>
+          <li><a href="#journey">Journey</a></li>
+          <li><a href="#media">Media</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Jaipur, Rajasthan</div>
+          <h1>Sunil Mudgal</h1>
+          <div class="hero-subtitle">Public Leader &amp; Social Worker</div>
+          <p class="hero-copy">
+            Former National Executive Member, BJP Kisan Morcha | National Convener, Brahm Shakti Sangh.
+            Dedicated to grassroots empowerment, agricultural progress, and community harmony across Rajasthan.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              Connect With Public Office
+            </a>
+            <a class="btn btn-outline" href="#journey">
+              Explore Journey
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-photo-wrap">
+          <figure class="hero-photo">
+            <img src="IMG_0245.jpg" alt="Sunil Mudgal official portrait" width="390" height="470" fetchpriority="high">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">About</div>
+          <h2 class="section-title">Public Leadership &amp; Service</h2>
+          <p class="section-intro">A concise overview of public engagement, organizational work and community service.</p>
+        </div>
+
+        <div class="about-grid">
+          <article class="card about-card">
+            <p>
+              Shree Sunil Mudgal is a seasoned political leader and public servant with over two decades of active engagement
+              in student activism, organizational party building, and social advocacy across Rajasthan.
+            </p>
+            <p>
+              Starting his political journey with student activism at Rajasthan University in 1999, he has dedicated his
+              public work to uniting community members, youth, and farmers to support social progress and representation.
+            </p>
+          </article>
+
+          <aside class="card facts-card" aria-label="Key responsibilities">
+            <h3>Key Responsibilities</h3>
+            <ul class="facts-list">
+              <li><strong>Political Wing:</strong> Former National Executive Member, BJP Kisan Morcha</li>
+              <li><strong>Youth Mobilization:</strong> Former State Convener, Yuva Kisan Samiti</li>
+              <li><strong>Social Integration:</strong> National Convener, Brahm Shakti Sangh</li>
+              <li><strong>Headquarters:</strong> Jaipur, Rajasthan</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="journey-section" id="journey">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">Timeline</div>
+          <h2 class="section-title">Political Journey</h2>
+          <p class="section-intro">Selected milestones from the journey presented in the original portal.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-content">
+              <div class="timeline-year">1999 – 2003</div>
+              <h3 class="timeline-title">Student Leadership</h3>
+              <p>Commenced public work leading student movements and student welfare initiatives at Rajasthan University.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-content">
+              <div class="timeline-year">2003</div>
+              <h3 class="timeline-title">Active Entry &amp; Parivartan Yatra</h3>
+              <p>Participated in party mobilization during the state Parivartan Yatra under Smt. Vasundhara Raje Scindia.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-content">
+              <div class="timeline-year">2007 – Present</div>
+              <h3 class="timeline-title">Community Service</h3>
+              <p>Elected President of Akhil Bhartiya Brahmin Mahasabha, driving national community integration.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-content">
+              <div class="timeline-year">2019</div>
+              <h3 class="timeline-title">Brahmin Maha Panchayat</h3>
+              <p>Served as National Convener for the Maha Panchayat held at Vidyadhar Nagar Stadium, Jaipur.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="media">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">Press &amp; Media</div>
+          <h2 class="section-title">Media &amp; Press Updates</h2>
+          <p class="section-intro">Selected photographs and media-related highlights.</p>
+        </div>
+
+        <div class="media-grid">
+          <article class="media-card">
+            <div class="media-image">
+              <img src="image1_7.jpg" alt="Organizational strategy session" loading="lazy" width="800" height="600">
+            </div>
+            <div class="media-content">
+              <h3>Organizational Strategy Session</h3>
+              <p>Key meeting with senior party members and regional coordinators to discuss worker engagement across Rajasthan.</p>
+            </div>
+          </article>
+
+          <article class="media-card">
+            <div class="media-image">
+              <img src="image2_7.jpg" alt="Leadership consultation with Col. Rajyavardhan Singh Rathore" loading="lazy" width="800" height="600">
+            </div>
+            <div class="media-content">
+              <h3>Leadership Consultation</h3>
+              <p>Interaction with Col. Rajyavardhan Singh Rathore regarding youth empowerment and state development initiatives.</p>
+            </div>
+          </article>
+
+          <article class="media-card">
+            <div class="media-image">
+              <img src="image3_7.jpg" alt="Kisan and community delegation" loading="lazy" width="800" height="600">
+            </div>
+            <div class="media-content">
+              <h3>Kisan &amp; Community Delegation</h3>
+              <p>Interaction with senior national leader Parshottam Rupala advocating for agricultural welfare and rural development.</p>
+            </div>
+          </article>
+
+          <article class="media-card">
+            <div class="media-image">
+              <img src="image5_7.jpg" alt="Grassroots public outreach" loading="lazy" width="800" height="600">
+            </div>
+            <div class="media-content">
+              <h3>Grassroots Public Outreach</h3>
+              <p>Public rallies and community marches focused on social unity and regional public grievances.</p>
+            </div>
+          </article>
+
+          <article class="media-card">
+            <div class="media-image">
+              <img src="image6_7.jpg" alt="Shri Parshuram Janmotsav launch" loading="lazy" width="800" height="600">
+            </div>
+            <div class="media-content">
+              <h3>Shri Parshuram Janmotsav Launch</h3>
+              <p>Official invitations and program schedule for Shri Parshuram Janmotsav celebrations.</p>
+            </div>
+          </article>
+
+          <article class="media-card">
+            <div class="media-image">
+              <img src="image10_4.jpg" alt="Brahm Shakti Sangh press briefing" loading="lazy" width="800" height="600">
+            </div>
+            <div class="media-content">
+              <h3>Brahm Shakti Sangh Press Briefing</h3>
+              <p>Media coverage of Sunil Mudgal addressing press representatives at Hotel Safari, Jaipur regarding public welfare.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-box">
+        <h2>Connect With the Public Office</h2>
+        <p>For public communication and enquiries, use the WhatsApp contact below.</p>
+        <a class="btn btn-primary" href="https://wa.me/919351515133" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          Contact on WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <a class="whatsapp" href="https://wa.me/919351515133" target="_blank" rel="noopener noreferrer"
+     aria-label="Chat with Sunil Mudgal office on WhatsApp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <footer>
+    <p>&copy; 2026 Sunil Mudgal Official Public Office. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    (() => {
+      const toggle = document.querySelector(".nav-toggle");
+      const menu = document.querySelector("#primary-navigation");
+
+      if (!toggle || !menu) return;
+
+      toggle.addEventListener("click", () => {
+        const isOpen = menu.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", String(isOpen));
+        toggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+        toggle.innerHTML = isOpen
+          ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
+          : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+      });
+
+      menu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          menu.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "Open navigation");
+          toggle.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
