@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunil Mudgal | Official Public Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0B132B;
+            --navy-light: #1C2541;
+            --charcoal: #2B2D42;
+            --white: #FFFFFF;
+            --off-white: #F8F9FA;
+            --grey-border: #E2E8F0;
+            --saffron: #FF9933;
+            --text-muted: #6C757D;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background-color: var(--navy);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-bottom: 3px solid var(--saffron);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            color: var(--white);
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--saffron);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--saffron);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: var(--white);
+            padding: 5rem 2rem;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.1rem;
+            color: var(--saffron);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-text p {
+            font-size: 1.05rem;
+            color: #CBD5E1;
+            margin-bottom: 2rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--saffron);
+            color: var(--navy);
+            padding: 0.8rem 1.8rem;
+            font-weight: 600;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #e68a2e;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 80%;
+            max-width: 380px;
+            border-radius: 8px;
+            border: 4px solid var(--saffron);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        /* SECTION STYLING */
+        section {
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .title-underline {
+            width: 60px;
+            height: 3px;
+            background-color: var(--saffron);
+            margin: 0 auto 3rem auto;
+        }
+
+        /* ABOUT & SUMMARY */
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .about-card {
+            background: var(--off-white);
+            padding: 2rem;
+            border-left: 4px solid var(--navy);
+            border-radius: 4px;
+        }
+
+        .fact-box {
+            background: var(--navy);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 4px;
+        }
+
+        .fact-box h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--saffron);
+            margin-bottom: 1rem;
+        }
+
+        .fact-box ul {
+            list-style: none;
+        }
+
+        .fact-box li {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 0.4rem;
+        }
+
+        /* TIMELINE */
+        .timeline {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline-item {
+            padding: 1.5rem 2rem;
+            border-left: 3px solid var(--saffron);
+            margin-left: 1rem;
+            position: relative;
+            background: var(--off-white);
+            margin-bottom: 1.5rem;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: var(--navy);
+            border: 3px solid var(--saffron);
+            border-radius: 50%;
+            position: absolute;
+            left: -11px;
+            top: 24px;
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            color: var(--saffron);
+            font-size: 1.1rem;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            color: var(--navy);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* CARD GRIDS */
+        .card-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: var(--white);
+            border: 1px solid var(--grey-border);
+            border-top: 4px solid var(--saffron);
+            padding: 2rem;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .info-card h3 {
+            color: var(--navy);
+            margin-bottom: 1rem;
+            font-family: 'Cinzel', serif;
+        }
+
+        /* PLACEHOLDER CONTAINERS */
+        .media-placeholder {
+            background: var(--off-white);
+            border: 2px dashed var(--grey-border);
+            padding: 3rem;
+            text-align: center;
+            color: var(--text-muted);
+            border-radius: 4px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--navy);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 2rem 1.5rem 2rem;
+            border-top: 3px solid var(--saffron);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            color: #94A3B8;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .hero-container, .about-container {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                display: none; /* Expandable menu can be added for mobile */
+            }
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">SUNIL <span>MUDGAL</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#journey">Political Journey</a></li>
+                    <li><a href="#kisan">Kisan Morcha</a></li>
+                    <li><a href="#brahm-shakti">Brahm Shakti Sangh</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>SUNIL MUDGAL</h1>
+                <div class="subtitle">Public Leader & Social Worker | Jaipur, Rajasthan</div>
+                <p>Former National Executive Member, BJP Kisan Morcha | National Convener, Brahm Shakti Sangh. Dedicated to grassroots empowerment, farmer welfare, and social harmony across Rajasthan.</p>
+                <a href="#contact" class="cta-btn">Connect With Public Office</a>
+            </div>
+            <div class="hero-image">
+                <!-- Replace with official image URL -->
+                <img src="https://via.placeholder.com/380x450" alt="Sunil Mudgal Official Portrait">
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h2 class="section-title">Public Service & Stewardship</h2>
+        <div class="title-underline"></div>
+        <div class="about-container">
+            <div class="about-card">
+                <p>Shree Sunil Mudgal is a seasoned political leader and public servant with over 25 years of active engagement in student activism, organizational party building, and social advocacy across Rajasthan[cite: 1].</p>
+                <br>
+                <p>Beginning his public journey in student leadership at Rajasthan University in 1999[cite: 1], he has continuously worked to connect youth, farmers, and community leaders with constructive social development and governance initiatives[cite: 1].</p>
+            </div>
+            <div class="fact-box">
+                <h3>Key Responsibilities</h3>
+                <ul>
+                    <li><strong>Political Wing:</strong> Former National Executive Member, BJP Kisan Morcha[cite: 1]</li>
+                    <li><strong>Youth Mobilization:</strong> Former State Convener, Yuva Kisan Samiti (Rajasthan)[cite: 1]</li>
+                    <li><strong>Social Leadership:</strong> National Convener, Brahm Shakti Sangh[cite: 1]</li>
+                    <li><strong>Base:</strong> Jaipur, Rajasthan[cite: 1]</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- POLITICAL JOURNEY TIMELINE -->
+    <section id="journey" style="background-color: var(--off-white);">
+        <h2 class="section-title">Political Journey</h2>
+        <div class="title-underline"></div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-year">1999 – 2003</div>
+                <div class="timeline-title">Student Leadership & Activism</div>
+                <p>Commenced public service as a student leader, actively organizing and leading student initiatives at Rajasthan University[cite: 1].</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2003</div>
+                <div class="timeline-title">Entry into Active Party Operations</div>
+                <p>Entered active party politics under the leadership of Smt. Vasundhara Raje Scindia, taking a key youth mobilization role in the state 'Parivartan Yatra'[cite: 1].</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2007 – Present</div>
+                <div class="timeline-title">Community Representation & Leadership</div>
+                <p>Appointed President of Akhil Bhartiya Brahmin Mahasabha, leading national social harmony and community welfare movements[cite: 1].</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2019</div>
+                <div class="timeline-title">Brahm Shakti Sangh & Maha Panchayat</div>
+                <p>Served as National Convener for the historic Brahmin Maha Panchayat held at Vidyadhar Nagar Stadium, Jaipur[cite: 1].</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE PILLARS -->
+    <section id="kisan">
+        <h2 class="section-title">Kisan Outreach & Social Leadership</h2>
+        <div class="title-underline"></div>
+        <div class="card-grid">
+            <div class="info-card">
+                <h3>🌾 Kisan Morcha</h3>
+                <p>Served as Rajasthan State Convener for Yuva Kisan Samiti[cite: 1]. Organized the massive 15,000+ farmer conference (Kisan Mahasammelan) in Deedwana (Nagaur) and contributed to key national campaigns in Gorakhpur and Haryana[cite: 1].</p>
+            </div>
+            <div class="info-card" id="brahm-shakti">
+                <h3>🤝 Brahm Shakti Sangh</h3>
+                <p>Driving cultural preservation, social unity, and youth mentorship across India as National Convener of Brahm Shakti Sangh[cite: 1].</p>
+            </div>
+            <div class="info-card">
+                <h3>🏛️ Grassroots Outreach</h3>
+                <p>Maintains deep organizational connections across 40 districts of Rajasthan, focusing on youth opportunities and civic grievance redressal[cite: 1].</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEDIA & GALLERY PLACEHOLDER -->
+    <section id="media" style="background-color: var(--off-white);">
+        <h2 class="section-title">Media & Public Records</h2>
+        <div class="title-underline"></div>
+        <div class="card-grid">
+            <div class="media-placeholder">
+                <p><strong>Press Releases & News Coverage</strong></p>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Verified print clippings and official releases will be archived here.</p>
+            </div>
+            <div class="media-placeholder">
+                <p><strong>Photographs & Event Archive</strong></p>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Official high-resolution gallery of public addresses and meetings.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h2 class="section-title">Public Office & Inquiries</h2>
+        <div class="title-underline"></div>
+        <div class="about-container">
+            <div class="about-card">
+                <h3>Office Address</h3>
+                <p><strong>Mudgal-Sadan</strong></p>
+                <p>C-28, Vardhman Nagar, Ajmer Road</p>
+                <p>Jaipur, Rajasthan, India</p>
+                <br>
+                <p><strong>Direct Helpline / WhatsApp:</strong> +91 9351515133</p>
+            </div>
+            <div class="about-card" style="border-left-color: var(--saffron);">
+                <h3>Connect Directly</h3>
+                <form onsubmit="event.preventDefault(); alert('Message feature ready for backend connection.');">
+                    <input type="text" placeholder="Your Name" style="width: 100%; padding: 0.6rem; margin-bottom: 0.8rem; border: 1px solid var(--grey-border);" required>
+                    <input type="tel" placeholder="Mobile Number" style="width: 100%; padding: 0.6rem; margin-bottom: 0.8rem; border: 1px solid var(--grey-border);" required>
+                    <textarea placeholder="Your Message / Grievance" style="width: 100%; padding: 0.6rem; margin-bottom: 0.8rem; border: 1px solid var(--grey-border);" rows="3" required></textarea>
+                    <button type="submit" class="cta-btn" style="border: none; cursor: pointer; width: 100%;">Submit Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Sunil Mudgal. Official Public Service Portal. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;">Designed for Official Archive & Public Interaction.</p>
+    </footer>
+
+</body>
+</html>
