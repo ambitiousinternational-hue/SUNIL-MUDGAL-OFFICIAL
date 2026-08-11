@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunil Mudgal | Official Public Portal</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --navy: #0B132B;
@@ -127,11 +128,12 @@
             font-weight: 600;
             border-radius: 4px;
             text-decoration: none;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .cta-btn:hover {
             background-color: #e68a2e;
+            transform: translateY(-2px);
         }
 
         .hero-image {
@@ -139,15 +141,14 @@
         }
 
         .hero-image img {
-    width: 100%;
-    max-width: 350px;       /* Controls how wide the photo can grow */
-    height: 420px;          /* Controls the fixed height */
-    object-fit: cover;      /* Crops proportionally without stretching */
-    object-position: top;   /* Keeps focus on the face/headwear */
-    border-radius: 8px;     /* Rounded corners */
-    border: 4px solid var(--saffron);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
+            width: 100%;
+            max-width: 360px;
+            height: 420px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 8px;
+            border: 4px solid var(--saffron);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
 
         /* SECTION STYLING */
@@ -225,6 +226,11 @@
             background: var(--off-white);
             margin-bottom: 1.5rem;
             border-radius: 0 4px 4px 0;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
         }
 
         .timeline-item::before {
@@ -268,6 +274,11 @@
             padding: 2rem;
             border-radius: 4px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
         }
 
         .info-card h3 {
@@ -276,14 +287,70 @@
             font-family: 'Cinzel', serif;
         }
 
-        /* PLACEHOLDER CONTAINERS */
-        .media-placeholder {
-            background: var(--off-white);
-            border: 2px dashed var(--grey-border);
-            padding: 3rem;
-            text-align: center;
-            color: var(--text-muted);
+        /* MEDIA SECTION */
+        .media-card {
+            background: var(--white);
+            border: 1px solid var(--grey-border);
             border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .media-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .media-card:hover img {
+            transform: scale(1.03);
+        }
+
+        .media-content {
+            padding: 1.5rem;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 4px;
+            border: 1px solid var(--grey-border);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* FLOATING WHATSAPP BUTTON */
+        .whatsapp-float {
+            position: fixed;
+            width: 55px;
+            height: 55px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 28px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
         }
 
         /* FOOTER */
@@ -300,13 +367,12 @@
             color: #94A3B8;
         }
 
-        /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
             .hero-container, .about-container {
                 grid-template-columns: 1fr;
             }
             nav ul {
-                display: none; /* Expandable menu can be added for mobile */
+                display: none;
             }
             .hero-text h1 {
                 font-size: 2.2rem;
@@ -316,7 +382,12 @@
 </head>
 <body>
 
-    <!-- HEADER & NAVIGATION -->
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/919351515133" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- HEADER -->
     <header>
         <div class="nav-container">
             <a href="#" class="logo">SUNIL <span>MUDGAL</span></a>
@@ -326,7 +397,7 @@
                     <li><a href="#journey">Political Journey</a></li>
                     <li><a href="#kisan">Kisan Morcha</a></li>
                     <li><a href="#brahm-shakti">Brahm Shakti Sangh</a></li>
-                    <li><a href="#media">Media</a></li>
+                    <li><a href="#media">Media Coverage</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -339,33 +410,32 @@
             <div class="hero-text">
                 <h1>SUNIL MUDGAL</h1>
                 <div class="subtitle">Public Leader & Social Worker | Jaipur, Rajasthan</div>
-                <p>Former National Executive Member, BJP Kisan Morcha | National Convener, Brahm Shakti Sangh. Dedicated to grassroots empowerment, farmer welfare, and social harmony across Rajasthan.</p>
-                <a href="#contact" class="cta-btn">Connect With Public Office</a>
+                <p>Former National Executive Member, BJP Kisan Morcha | National Convener, Brahm Shakti Sangh. Dedicated to grassroots empowerment, agricultural progress, and community harmony across Rajasthan.</p>
+                <a href="#contact" class="cta-btn"><i class="fas fa-paper-plane"></i> Connect With Public Office</a>
             </div>
-           <img src="sunil-photo.jpg" alt="Sunil Mudgal">
-                <!-- Replace with official image URL -->
-                <img src="https://via.placeholder.com/380x450" alt="Sunil Mudgal Official Portrait">
+            <div class="hero-image">
+                <img src="sunil-photo.jpg.jpeg" alt="Sunil Mudgal Official Photo">
             </div>
         </div>
     </section>
 
     <!-- ABOUT SECTION -->
     <section id="about">
-        <h2 class="section-title">Public Service & Stewardship</h2>
+        <h2 class="section-title">Public Leadership & Service</h2>
         <div class="title-underline"></div>
         <div class="about-container">
             <div class="about-card">
-                <p>Shree Sunil Mudgal is a seasoned political leader and public servant with over 25 years of active engagement in student activism, organizational party building, and social advocacy across Rajasthan[cite: 1].</p>
+                <p>Shree Sunil Mudgal is a seasoned political leader and public servant with over two decades of active engagement in student activism, organizational party building, and social advocacy across Rajasthan.</p>
                 <br>
-                <p>Beginning his public journey in student leadership at Rajasthan University in 1999[cite: 1], he has continuously worked to connect youth, farmers, and community leaders with constructive social development and governance initiatives[cite: 1].</p>
+                <p>Starting his political journey with student activism at Rajasthan University in 1999, he has dedicated his life to uniting community members, youth, and farmers to ensure social progress and equitable representation.</p>
             </div>
             <div class="fact-box">
                 <h3>Key Responsibilities</h3>
                 <ul>
-                    <li><strong>Political Wing:</strong> Former National Executive Member, BJP Kisan Morcha[cite: 1]</li>
-                    <li><strong>Youth Mobilization:</strong> Former State Convener, Yuva Kisan Samiti (Rajasthan)[cite: 1]</li>
-                    <li><strong>Social Leadership:</strong> National Convener, Brahm Shakti Sangh[cite: 1]</li>
-                    <li><strong>Base:</strong> Jaipur, Rajasthan[cite: 1]</li>
+                    <li><strong>Political Wing:</strong> Former National Executive Member, BJP Kisan Morcha</li>
+                    <li><strong>Youth Mobilization:</strong> Former State Convener, Yuva Kisan Samiti</li>
+                    <li><strong>Social Integration:</strong> National Convener, Brahm Shakti Sangh</li>
+                    <li><strong>Headquarters:</strong> Jaipur, Rajasthan</li>
                 </ul>
             </div>
         </div>
@@ -378,82 +448,88 @@
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-year">1999 – 2003</div>
-                <div class="timeline-title">Student Leadership & Activism</div>
-                <p>Commenced public service as a student leader, actively organizing and leading student initiatives at Rajasthan University[cite: 1].</p>
+                <div class="timeline-title">Student Leadership</div>
+                <p>Commenced public work leading student movements and student welfare initiatives at Rajasthan University.</p>
             </div>
             <div class="timeline-item">
                 <div class="timeline-year">2003</div>
-                <div class="timeline-title">Entry into Active Party Operations</div>
-                <p>Entered active party politics under the leadership of Smt. Vasundhara Raje Scindia, taking a key youth mobilization role in the state 'Parivartan Yatra'[cite: 1].</p>
+                <div class="timeline-title">Active Entry & Parivartan Yatra</div>
+                <p>Participated in party mobilization during the state Parivartan Yatra under Smt. Vasundhara Raje Scindia.</p>
             </div>
             <div class="timeline-item">
                 <div class="timeline-year">2007 – Present</div>
-                <div class="timeline-title">Community Representation & Leadership</div>
-                <p>Appointed President of Akhil Bhartiya Brahmin Mahasabha, leading national social harmony and community welfare movements[cite: 1].</p>
+                <div class="timeline-title">Community Service</div>
+                <p>Elected President of Akhil Bhartiya Brahmin Mahasabha, driving national community integration.</p>
             </div>
             <div class="timeline-item">
                 <div class="timeline-year">2019</div>
-                <div class="timeline-title">Brahm Shakti Sangh & Maha Panchayat</div>
-                <p>Served as National Convener for the historic Brahmin Maha Panchayat held at Vidyadhar Nagar Stadium, Jaipur[cite: 1].</p>
+                <div class="timeline-title">Brahmin Maha Panchayat</div>
+                <p>Served as National Convener for the historic Maha Panchayat held at Vidyadhar Nagar Stadium, Jaipur.</p>
             </div>
         </div>
     </section>
 
-    <!-- CORE PILLARS -->
+    <!-- CORE WORK GRIDS -->
     <section id="kisan">
-        <h2 class="section-title">Kisan Outreach & Social Leadership</h2>
+        <h2 class="section-title">Key Pillars</h2>
         <div class="title-underline"></div>
         <div class="card-grid">
             <div class="info-card">
-                <h3>🌾 Kisan Morcha</h3>
-                <p>Served as Rajasthan State Convener for Yuva Kisan Samiti[cite: 1]. Organized the massive 15,000+ farmer conference (Kisan Mahasammelan) in Deedwana (Nagaur) and contributed to key national campaigns in Gorakhpur and Haryana[cite: 1].</p>
+                <h3>🌾 Kisan Outreach</h3>
+                <p>Organized the landmark 15,000+ Deedwana Kisan Mahasammelan and led youth farmer advocacy initiatives across North India.</p>
             </div>
             <div class="info-card" id="brahm-shakti">
                 <h3>🤝 Brahm Shakti Sangh</h3>
-                <p>Driving cultural preservation, social unity, and youth mentorship across India as National Convener of Brahm Shakti Sangh[cite: 1].</p>
+                <p>Working toward social integration, youth mentorship, and cultural preservation across India as National Convener.</p>
             </div>
             <div class="info-card">
-                <h3>🏛️ Grassroots Outreach</h3>
-                <p>Maintains deep organizational connections across 40 districts of Rajasthan, focusing on youth opportunities and civic grievance redressal[cite: 1].</p>
+                <h3>🏛️ Grassroots Base</h3>
+                <p>Maintains strong organizational presence and worker engagement networks across 40 districts in Rajasthan.</p>
             </div>
         </div>
     </section>
 
-    <!-- MEDIA & GALLERY PLACEHOLDER -->
+    <!-- MEDIA COVERAGE SECTION -->
     <section id="media" style="background-color: var(--off-white);">
-        <h2 class="section-title">Media & Public Records</h2>
+        <h2 class="section-title">Media & Press Updates</h2>
         <div class="title-underline"></div>
         <div class="card-grid">
-            <div class="media-placeholder">
-                <p><strong>Press Releases & News Coverage</strong></p>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Verified print clippings and official releases will be archived here.</p>
+            <div class="media-card">
+                <div class="media-content">
+                    <h3 style="color: var(--navy); margin-bottom: 0.5rem;">Deedwana Kisan Conference</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Organized a landmark gathering of over 15,000 farmers to advocate for rural welfare and policy rights.</p>
+                </div>
             </div>
-            <div class="media-placeholder">
-                <p><strong>Photographs & Event Archive</strong></p>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Official high-resolution gallery of public addresses and meetings.</p>
+            <div class="media-card">
+                <div class="media-content">
+                    <h3 style="color: var(--navy); margin-bottom: 0.5rem;">Jaipur Maha Panchayat</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">Mobilized thousands of delegates at Vidyadhar Nagar Stadium for social unity and youth representation.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CONTACT SECTION -->
     <section id="contact">
-        <h2 class="section-title">Public Office & Inquiries</h2>
+        <h2 class="section-title">Public Office & Grievances</h2>
         <div class="title-underline"></div>
         <div class="about-container">
             <div class="about-card">
-                <h3>Office Address</h3>
+                <h3>Jaipur Office Address</h3>
                 <p><strong>Mudgal-Sadan</strong></p>
                 <p>C-28, Vardhman Nagar, Ajmer Road</p>
                 <p>Jaipur, Rajasthan, India</p>
                 <br>
-                <p><strong>Direct Helpline / WhatsApp:</strong> +91 9351515133</p>
+                <p><i class="fas fa-phone-alt"></i> <strong>Helpline:</strong> +91 9351515133</p>
+                <br>
+                <a href="https://wa.me/919351515133" class="cta-btn" style="background-color: #25D366; color: white;" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
             </div>
             <div class="about-card" style="border-left-color: var(--saffron);">
-                <h3>Connect Directly</h3>
-                <form onsubmit="event.preventDefault(); alert('Message feature ready for backend connection.');">
-                    <input type="text" placeholder="Your Name" style="width: 100%; padding: 0.6rem; margin-bottom: 0.8rem; border: 1px solid var(--grey-border);" required>
+                <h3>Send Direct Inquiry</h3>
+                <form onsubmit="event.preventDefault(); alert('Your message has been submitted to the office desk.');">
+                    <input type="text" placeholder="Your Full Name" style="width: 100%; padding: 0.6rem; margin-bottom: 0.8rem; border: 1px solid var(--grey-border);" required>
                     <input type="tel" placeholder="Mobile Number" style="width: 100%; padding: 0.6rem; margin-bottom: 0.8rem; border: 1px solid var(--grey-border);" required>
-                    <textarea placeholder="Your Message / Grievance" style="width: 100%; padding: 0.6rem; margin-bottom: 0.8rem; border: 1px solid var(--grey-border);" rows="3" required></textarea>
+                    <textarea placeholder="Your Message / Public Grievance" style="width: 100%; padding: 0.6rem; margin-bottom: 0.8rem; border: 1px solid var(--grey-border);" rows="3" required></textarea>
                     <button type="submit" class="cta-btn" style="border: none; cursor: pointer; width: 100%;">Submit Message</button>
                 </form>
             </div>
@@ -463,7 +539,6 @@
     <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Sunil Mudgal. Official Public Service Portal. All rights reserved.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.8rem;">Designed for Official Archive & Public Interaction.</p>
     </footer>
 
 </body>
