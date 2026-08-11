@@ -311,23 +311,6 @@
             padding: 1.5rem;
         }
 
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 4px;
-            border: 1px solid var(--grey-border);
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
         /* FLOATING WHATSAPP BUTTON */
         .whatsapp-float {
             position: fixed;
@@ -395,8 +378,6 @@
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#journey">Political Journey</a></li>
-                    <li><a href="#kisan">Kisan Morcha</a></li>
-                    <li><a href="#brahm-shakti">Brahm Shakti Sangh</a></li>
                     <li><a href="#media">Media Coverage</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -469,20 +450,12 @@
         </div>
     </section>
 
-    <!-- CORE WORK GRIDS -->
-    <section id="kisan">
-        <h2 class="section-title">Key Pillars</h2>
-        <div class="title-underline"></div>
-        <div class="card-grid">
-            
-            <!-- EXISTING PHOTO CARDS -->
-           <!-- MEDIA COVERAGE SECTION -->
+    <!-- MEDIA COVERAGE SECTION -->
     <section id="media" style="background-color: var(--off-white);">
         <h2 class="section-title">Media & Press Updates</h2>
         <div class="title-underline"></div>
 
-        <!-- START REPLACING FROM HERE -->
-       <div class="card-grid">
+        <div class="card-grid">
             
             <!-- PHOTO 1 -->
             <div class="media-card">
@@ -539,3 +512,12 @@
             </div>
 
         </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <p>&copy; 2026 Sunil Mudgal Official Public Office. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
